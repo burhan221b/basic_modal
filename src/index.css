@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.modal {
+    position: fixed; /* Modal will follow user scroll if active */
+    top: 50%; /* Positions Modal 50% down */
+    left: 50%; /* Positions Modal 50% towards the left --> But not center yet */
+    transform: translate(-50%, -50%) scale(0); /* Helps center Modal by taking size of modal and dividing it by half X and Y */
+    transition: 200ms "ease-in-out";
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    z-index: 10; /* 10 is random, but high number to make sure it's on top of everything else when active */
+    min-width: 320px; /* Doesn't Go below 320px for mobile */
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000000;
+}
+
+.modal-header .modal-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .btn-modal-close {
+    /* Make the close button not look like a button */
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.modal-body {
+    padding: 0.5rem;
+}
+
+#overlay {
+    position: fixed; /* Scroll with user */
+    /* Fill all the corners of the screen */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Gray See Through Color */
+    opacity: 0; /* Will be hidden */
+    /* 
+    By Default, overlay will be there but invisible, so pointer-events none 
+    will allow you to click on other elements 
+    */
+    pointer-events: none;
+    transition: 200ms "ease-in-out";
+}
+
+#overlay.active {
+    /* 
+    Here, if javaScript adds active class, then show overlay 
+    and make everything else not clickable except modal
+     */
+    opacity: 1;
+    pointer-events: all;
+}
