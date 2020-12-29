@@ -5,10 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic Modal</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
 </head>
 
 <body>
-
+    <!-- Button to Open Modal -->
+    <button class="btn-modal-open">Click Here To Open Modal</button>
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <!-- Modal Header (Place Title and Close Button) -->
+        <div class="modal-header" id="modal-header">
+            <!-- Modal Title -->
+            <div class="modal-title" id="modal-title">Title For Modal Goes Here</div>
+            <!-- Modal Close Button -->
+            <button class="btn-modal-close">&times;</button>
+        </div>
+        <!-- Modal Body (Contains Content) -->
+        <div class="modal-body" id="modal-body">
+            <!-- Example Content -->
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolore neque quisquam, impedit sunt
+            maxime ab accusamus architecto quidem amet eius fugit, iure repudiandae, provident quibusdam at alias enim
+            quod delectus. Ea earum necessitatibus enim omnis facilis inventore corrupti dignissimos neque laboriosam,
+            mollitia eius qui eos! Voluptatum accusamus atque minima dolor architecto eveniet voluptas iste porro
+            corporis, quo eos! Ullam reprehenderit iure perspiciatis quisquam accusantium nulla obcaecati voluptates!
+            Animi eius tempore aut maxime dolor maiores dolorum alias, repellat ullam mollitia?
+        </div>
+    </div>
+    <!-- Modal Overlay (Will Make Everything Else Gray Except Modal When Active) -->
+    <div class="overlay" id="overlay"></div>
 </body>
 
 </html>
