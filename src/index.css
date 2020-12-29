@@ -9,7 +9,7 @@
     top: 50%; /* Positions Modal 50% down */
     left: 50%; /* Positions Modal 50% towards the left --> But not center yet */
     transform: translate(-50%, -50%) scale(0); /* Helps center Modal by taking size of modal and dividing it by half X and Y */
-    transition: 200ms "ease-in-out";
+    transition: 200ms ease-in-out;
     background-color: #ffffff;
     border: 1px solid #000000;
     border-radius: 5px;
@@ -64,7 +64,7 @@
     will allow you to click on other elements 
     */
     pointer-events: none;
-    transition: 200ms "ease-in-out";
+    transition: 200ms ease-in-out;
 }
 
 #overlay.active {
